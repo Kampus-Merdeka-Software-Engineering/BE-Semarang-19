@@ -1,0 +1,240 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.border-validation{
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.validation {
+    height: 100%;
+    outline: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    background-color: green;
+    text-align: center;
+}
+
+.layar-dalam{
+    width: 1000px;
+    margin:auto;
+}
+
+nav{
+    z-index: 100;
+    color: black;
+    text-align: center;
+    position: fixed;
+    line-height: 60px;
+    background-color: white;
+    width: 100%;
+}
+
+
+nav .logo {
+    float:  left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+}
+
+nav .logo img {
+    vertical-align: middle;
+    width: 120px;
+}
+
+nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+
+nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+nav ul li a {
+    color: black;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+div.body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 120vh;
+    padding: 10px;
+    background: linear-gradient(135deg, #000000,#434343);
+}
+
+.tombol-menu{
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.tombol-menu .line{
+    height: 3px;
+    background-color: #000000;
+}
+
+.container{
+    margin-top: 100px;
+    max-width: 600px;
+    width: 100%;
+    background: rgb(231, 234, 234);
+    padding: 25px 30px;
+    border-radius: 5px;
+    
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(#000000,#434343);
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0,3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #2a5298;
+}
+
+form .button{
+
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(-135deg, #000000,#434343);
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #000000,#434343);
+}
+@media (max-width : 584px){
+    .container{
+        max-width: 100%;
+        margin-top: 60px;
+    }
+    div.body{
+        height: 150vh;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    nav.layar-dalam{
+        width: 100%;
+    }
+    nav .menu ul {
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+    }
+    nav .menu ul li{
+        width: 100%;
+        border-bottom: 1px solid whitesmoke;
+        background-color: rgb(255, 255, 255);
+        line-height: 40px;
+    
+    }
+    nav .menu ul li a{
+        color: #333;
+    }
+
+    .tombol-menu{
+        display: flex;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title><%= title %></title>
+</head>
+    <nav>
+        <!-- Navbar -->
+        <div class="layar-dalam">
+            <div class="logo">
+                <a href=""> <img src="../assets/sijeni-black1.png" class="black" />
+                </a>
+            </div>
+            <!--  menu ntar di ganti jadi navbar-->
+            <div class="menu">
+                <a href="#" class="tombol-menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </a>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/view/index.html#home">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main-body">
+<div class="body">
+    <div class="container">
+        <div class="title">Form Pengiriman</div>
+            <form id="orderForm" action="/tbl_order" method="post">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Nama Penerima</span>    
+                        <input id="namaPenerima" type="text" name="namaPenerima" placeholder="nama penerima" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Alamat Pengirim</span>    
+                        <input id="alamatPengirim" type="text" name="alamatPengirim" placeholder="alamat pengirim" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nomer Telepon</span>    
+                        <input id="nomerTelpon" type="text" name="nomerTelpon" placeholder="nomer telpon" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">jenis layanan</span>    
+                        <select id="jenisLayanan">
+                            <option value="regule">Reguler</option>
+                            <option value="express">Express</option>
+                            <option value="same-day">Same Day</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nama Kurir</span>    
+                        <input id="namaKurir" type="text" name="namaKurir" placeholder="nama kurir" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nomer Telepon</span>    
+                        <input id="nomerTelponKurir" type="text" name="nomerTelponKurir" placeholder="nomer telepon" required>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Order">
+                </div>
+                    <div class="border-validation">
+                <!-- <div id="formValidation" class="validation">asdasdasdadsadas</div> -->
+                </div>
+            </form>
+         </div>
+    </div>
+        </div>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="form.js"></script>
+    
+</body>
+</html>
