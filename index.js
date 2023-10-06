@@ -18,8 +18,8 @@ app.use(express.json());
 app.use(OrderRoute);
 
 
-app.get(baseURL, (req,res) => {
-    res.render(baseURL, { title: 'Halaman Form' });
+app.get("/form", (req,res) => {
+    res.render('form', { title: 'Halaman Form' });
 });
 
 app.use('/', (req, res) => {
