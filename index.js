@@ -17,7 +17,7 @@ app.use(OrderRoute);
 
 
 app.get("https://be-semarang-19-production.up.railway.app/from", (req,res) => {
-    res.render('form', { title: 'Halaman Form' });
+    res.render('https://be-semarang-19-production.up.railway.app/from', { title: 'Halaman Form' });
 });
 
 app.use('/', (req, res) => {
