@@ -8,7 +8,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
-const baseURL = "/form";
 
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine','ejs' );
@@ -18,8 +17,8 @@ app.use(express.json());
 app.use(OrderRoute);
 
 
-app.get(baseURL, (req,res) => {
-    res.render(baseURL, { title: 'Halaman Form' });
+app.get('form', (req,res) => {
+    res.render('form', { title: 'Halaman Form' });
 });
 
 app.use('/', (req, res) => {
