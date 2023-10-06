@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(OrderRoute);
 
 
-app.get('form', (req,res) => {
+app.get('/form', (req,res) => {
     res.render('form', { title: 'Halaman Form' });
 });
 
