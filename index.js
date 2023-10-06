@@ -8,6 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
+const baseURL = "https://be-semarang-19-production.up.railway.app/from";
+
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine','ejs' );
 app.use(express.static(path.join(__dirname,'views')))
@@ -16,8 +18,8 @@ app.use(express.json());
 app.use(OrderRoute);
 
 
-app.get("https://be-semarang-19-production.up.railway.app/from", (req,res) => {
-    res.render('https://be-semarang-19-production.up.railway.app/from', { title: 'Halaman Form' });
+app.get(baseURL, (req,res) => {
+    res.render(baseURL, { title: 'Halaman Form' });
 });
 
 app.use('/', (req, res) => {
