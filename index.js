@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(OrderRoute);
 
-const baseURL = "be-semarang-19-production.up.railway.app/form";
+const baseURL = "https://be-semarang-19-production.up.railway.app/from"
 
 app.get(baseURL, (req,res) => {
     res.render('form', { title: 'Halaman Form' });
