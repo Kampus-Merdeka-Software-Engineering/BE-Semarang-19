@@ -20,6 +20,10 @@ app.get('/form' , (req,res) => {
     res.render('form', { title: 'Halaman Form' });
 });
 
+app.get('/cekOrder' , (req,res) => {
+    res.render('cekOrder', { title: 'Halaman Cek Order' });
+});
+
 app.use('/', (req, res) => {
     res.status(404);
     res.send('<h1>Not Found 404</h1>');
