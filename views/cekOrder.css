@@ -1,0 +1,194 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.layar-dalam{
+    width: 1000px;
+    margin:auto;
+}
+
+nav{
+    z-index: 100;
+    color: black;
+    text-align: center;
+    position: fixed;
+    line-height: 60px;
+    background-color: white;
+    width: 100%;
+}
+
+
+nav .logo {
+    float:  left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+}
+
+nav .logo img {
+    vertical-align: middle;
+    width: 120px;
+}
+
+nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+
+nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+nav ul li a {
+    color: black;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    padding: 10px 10px 10px 10px;
+}
+
+div.body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    padding: 10px;
+    background: linear-gradient(135deg, #000000,#434343);
+}
+
+.tombol-menu{
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.tombol-menu .line{
+    height: 3px;
+    background-color: #000000;
+}
+
+
+.cek-order{
+    background-color: whitesmoke;
+    padding: 10px 10px 20px 10px;
+    border-radius: 10px;
+}
+
+thead tr th{
+    background: #434343;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.table-responsive a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    color: #ccc;
+    background-color: #434343;
+
+}
+
+.table-responsive a:hover{
+    color: #080808;
+    background-color: #74fdfd;
+}
+
+
+/* Tambahkan gaya untuk membuat tabel responsif */
+@media screen and (max-width: 600px) {
+    div.body{
+        padding-top: 80px;
+        height: max-content;
+    }
+
+    nav.layar-dalam{
+        width: 100%;
+    }
+    nav .menu ul {
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+    }
+    nav .menu ul li{
+        width: 100%;
+        border-bottom: 1px solid whitesmoke;
+        background-color: rgb(255, 255, 255);
+        line-height: 40px;
+    
+    }
+    nav .menu ul li a{
+        color: #333;
+    }
+
+    .tombol-menu{
+        display: flex;
+    }
+   
+    table {
+        border: 1px solid #ccc;
+    }
+    
+    th, td {
+        display: block;
+        width: 100%;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+}
+
