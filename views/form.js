@@ -57,32 +57,24 @@ document.getElementById("orderForm").addEventListener("submit", async function (
       if (response.ok) {
         // Handle jika permintaan sukses (status 200)
         alert("Order berhasil!");
-        // Lakukan sesuatu setelah berhasil mengirimkan formulir, jika diperlukan
-      } else {
+
+        // Hapus isi dari input setelah berhasil mengirimkan formulir
+        document.getElementById("namaPenerima").value = "";
+        document.getElementById("alamatPengirim").value = "";
+        document.getElementById("nomerTelpon").value = "";
+        document.getElementById("jenisLayanan").value = "reguler"; // Setel ke nilai default
+        document.getElementById("namaKurir").value = "";
+        document.getElementById("nomerTelponKurir").value = "";
+
+        // Sembunyikan pesan alert setelah beberapa detik
+        setTimeout(function () {
+            alert(""); // Mengosongkan pesan alert
+        }, 3000); // Tunggu 3 detik sebelum mengosongkan pesan alert
+    } else {
         // Handle jika ada kesalahan pada server atau validasi gagal
         alert("Terjadi kesalahan saat mengirimkan formulir.");
-      }
+    }
     } catch (error) {
       console.error("Error:", error);
     }
   });
-  
-
-// // efek scrol
-// $(document).ready(function(params) {
-//     let scroll_pos = 0;
-//     $(document).scroll(function(params) {
-//         scroll_pos = $(this).scrollTop();
-//         if (scroll_pos > 0) {
-//             $("nav").addClass("putih");
-//             $("nav img.black").show();
-//             $("nav img.putih").hide();
-//         }else{
-//             $("nav").removeClass("putih");
-//             $("nav img.black").hide();
-//             $("nav img.putih").show();
-//         }
-//     })
-// });
-// efek scrol
-
